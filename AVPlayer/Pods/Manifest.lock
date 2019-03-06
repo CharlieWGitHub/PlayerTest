@@ -2,19 +2,23 @@ PODS:
   - CLPlayer (1.2.8):
     - Masonry
   - Masonry (1.1.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - CLPlayer
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CLPlayer
     - Masonry
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   CLPlayer: 23a307d5378033092a2d5f537ec0cd5cd3cf27b3
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 5b62b8f5e3c58518ddfa625b4781d3dd3a67b33f
+PODFILE CHECKSUM: 52df5ca1106c4d80762803a11fb3e9ef066cff1f
 
 COCOAPODS: 1.6.0.rc.2

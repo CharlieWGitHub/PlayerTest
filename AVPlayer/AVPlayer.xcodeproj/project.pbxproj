@@ -20,6 +20,8 @@
 		E919BCE1222FA09F0008006E /* AVPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E919BCE0222FA09F0008006E /* AVPlayerUITests.m */; };
 		E919BCF2222FA23B0008006E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E919BCF1222FA23B0008006E /* Default-568h@2x.png */; };
 		E919BCF9222FA36C0008006E /* AVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E919BCF8222FA36C0008006E /* AVPlayerViewController.m */; };
+		E919BCFD222FA6380008006E /* UIView+CLSetRect.m in Sources */ = {isa = PBXBuildFile; fileRef = E919BCFC222FA6380008006E /* UIView+CLSetRect.m */; };
+		E919BD01222FA74F0008006E /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E919BD00222FA74F0008006E /* video.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		E919BCF1222FA23B0008006E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E919BCF7222FA36C0008006E /* AVPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVPlayerViewController.h; sourceTree = "<group>"; };
 		E919BCF8222FA36C0008006E /* AVPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayerViewController.m; sourceTree = "<group>"; };
+		E919BCFB222FA6380008006E /* UIView+CLSetRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CLSetRect.h"; sourceTree = "<group>"; };
+		E919BCFC222FA6380008006E /* UIView+CLSetRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CLSetRect.m"; sourceTree = "<group>"; };
+		E919BD00222FA74F0008006E /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		E919BD06222FCC210008006E /* Header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.pch; sourceTree = "<group>"; };
 		F853F9CCFFD748AC6088C2BC /* Pods-AVPlayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerUITests.release.xcconfig"; path = "Target Support Files/Pods-AVPlayerUITests/Pods-AVPlayerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +114,6 @@
 				A13A887B6A2248DAA6ED3CB8 /* Pods-AVPlayerUITests.debug.xcconfig */,
 				F853F9CCFFD748AC6088C2BC /* Pods-AVPlayerUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -174,6 +179,8 @@
 		E919BCEE222FA1B10008006E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E919BD02222FB73C0008006E /* UIImagePicker */,
+				E919BCFF222FA7050008006E /* Resource */,
 				E919BCF3222FA2910008006E /* NetWork */,
 				E919BCF0222FA20B0008006E /* System */,
 				E919BCEF222FA1FF0008006E /* UI */,
@@ -184,6 +191,7 @@
 		E919BCEF222FA1FF0008006E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E919BCFA222FA61F0008006E /* Category */,
 				E919BCF6222FA2C50008006E /* Views */,
 				E919BCF5222FA2BD0008006E /* ViewModels */,
 				E919BCF4222FA2B00008006E /* Controllers */,
@@ -203,6 +211,7 @@
 				E919BCC7222FA09E0008006E /* LaunchScreen.storyboard */,
 				E919BCCA222FA09E0008006E /* Info.plist */,
 				E919BCCB222FA09E0008006E /* main.m */,
+				E919BD06222FCC210008006E /* Header.pch */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -235,6 +244,30 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E919BCFA222FA61F0008006E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E919BCFB222FA6380008006E /* UIView+CLSetRect.h */,
+				E919BCFC222FA6380008006E /* UIView+CLSetRect.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E919BCFF222FA7050008006E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E919BD00222FA74F0008006E /* video.mp4 */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E919BD02222FB73C0008006E /* UIImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIImagePicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E919BCC9222FA09E0008006E /* LaunchScreen.storyboard in Resources */,
+				E919BD01222FA74F0008006E /* video.mp4 in Resources */,
 				E919BCF2222FA23B0008006E /* Default-568h@2x.png in Resources */,
 				E919BCC6222FA09E0008006E /* Assets.xcassets in Resources */,
 				E919BCC4222FA09D0008006E /* Main.storyboard in Resources */,
@@ -400,12 +434,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AVPlayer/Pods-AVPlayer-resources.sh",
 				"${PODS_ROOT}/CLPlayer/CLPlayer/Resource/CLPlayer.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CLPlayer.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -463,6 +499,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E919BCFD222FA6380008006E /* UIView+CLSetRect.m in Sources */,
 				E919BCC1222FA09D0008006E /* ViewController.m in Sources */,
 				E919BCCC222FA09E0008006E /* main.m in Sources */,
 				E919BCF9222FA36C0008006E /* AVPlayerViewController.m in Sources */,
@@ -640,6 +677,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z3L8JB7WBX;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AVPlayer/Classes/System/Header.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/AVPlayer/Classes/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -658,6 +696,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z3L8JB7WBX;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AVPlayer/Classes/System/Header.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/AVPlayer/Classes/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
