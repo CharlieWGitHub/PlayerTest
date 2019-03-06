@@ -1,0 +1,20 @@
+PODS:
+  - CLPlayer (1.2.8):
+    - Masonry
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - CLPlayer
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CLPlayer
+    - Masonry
+
+SPEC CHECKSUMS:
+  CLPlayer: 23a307d5378033092a2d5f537ec0cd5cd3cf27b3
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: 5b62b8f5e3c58518ddfa625b4781d3dd3a67b33f
+
+COCOAPODS: 1.6.0.rc.2

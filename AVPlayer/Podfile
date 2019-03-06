@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'AVPlayer' do
+pod 'CLPlayer'
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for AVPlayer
+
+  target 'AVPlayerTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'AVPlayerUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
