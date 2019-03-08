@@ -21,7 +21,7 @@
 #define TabbarHeight (isIPhoneX ? (49.f + 34.f) : 49.f)
 #define TabbarSafeBottomMargin (isIPhoneX ? 34.f : 0.f)
 
-
+#import <SVProgressHUD.h>
 
 
 #endif /* Header_pch */

@@ -17,7 +17,72 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C40-NP-9e9">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-rK-jam">
+                                        <rect key="frame" x="0.0" y="40" width="375" height="40"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4If-tG-fXS">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXN-Pl-ukS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="40"/>
+                                                        <state key="normal" title="录音"/>
+                                                        <connections>
+                                                            <action selector="Recornd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RZ7-3M-QAa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXL-aN-thU">
+                                                        <rect key="frame" x="94" y="0.0" width="93.5" height="40"/>
+                                                        <state key="normal" title="视频"/>
+                                                        <connections>
+                                                            <action selector="Video:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z31-z6-4wy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86S-uN-os5">
+                                                        <rect key="frame" x="187.5" y="0.0" width="94" height="40"/>
+                                                        <state key="normal" title="图片"/>
+                                                        <connections>
+                                                            <action selector="Picture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1R1-px-pPb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJu-zy-BKc">
+                                                        <rect key="frame" x="281.5" y="0.0" width="93.5" height="40"/>
+                                                        <state key="normal" title="留言"/>
+                                                        <connections>
+                                                            <action selector="Word:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JNu-zw-Tfv"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="4If-tG-fXS" firstAttribute="top" secondItem="Pca-rK-jam" secondAttribute="top" id="3KE-jJ-wBI"/>
+                                            <constraint firstItem="4If-tG-fXS" firstAttribute="leading" secondItem="Pca-rK-jam" secondAttribute="leading" id="C6h-S3-cFB"/>
+                                            <constraint firstAttribute="height" constant="40" id="XC8-Px-tjM"/>
+                                            <constraint firstAttribute="bottom" secondItem="4If-tG-fXS" secondAttribute="bottom" id="bRS-VU-qQ4"/>
+                                            <constraint firstAttribute="trailing" secondItem="4If-tG-fXS" secondAttribute="trailing" id="t7u-Bz-HLY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93239082993589684" green="0.93239082993589684" blue="0.93239082993589684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="HVN-sU-2s2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pca-rK-jam" secondAttribute="trailing" id="IPd-yM-wpl"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pca-rK-jam" secondAttribute="bottom" id="SBl-wJ-ezz"/>
+                                    <constraint firstItem="Pca-rK-jam" firstAttribute="leading" secondItem="C40-NP-9e9" secondAttribute="leading" id="mxU-Lz-hyr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C40-NP-9e9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EpW-M3-uop"/>
+                            <constraint firstItem="C40-NP-9e9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="FFv-8H-HEh"/>
+                            <constraint firstItem="C40-NP-9e9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W6Z-fs-wvE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Egv-uc-BHb">
@@ -25,17 +90,32 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WGW-PV-ygJ">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="小郭">
+                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="gotoAVPlayerVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HB1-oI-TMS"/>
+                                    <action selector="leftItemClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ufm-1g-BnP"/>
                                 </connections>
                             </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="nqa-Kd-3CJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3he-sp-sQV">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="小王">
+                                    <color key="titleColor" red="0.25098039220000001" green="0.69019607839999997" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightItemClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dC3-eb-0hJ"/>
+                                </connections>
+                            </button>
+                            <color key="tintColor" red="0.25098039220000001" green="0.69019607839999997" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-4" y="-415.14242878560725"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A0P-ij-ahx">
