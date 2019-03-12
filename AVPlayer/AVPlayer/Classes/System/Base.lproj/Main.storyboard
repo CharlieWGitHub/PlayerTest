@@ -31,7 +31,8 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="94" height="40"/>
                                                         <state key="normal" title="录音"/>
                                                         <connections>
-                                                            <action selector="Recornd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RZ7-3M-QAa"/>
+                                                            <action selector="dragInside:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="BK5-Ws-yA4"/>
+                                                            <action selector="dragOutside:" destination="BYZ-38-t0r" eventType="touchDragExit" id="EGO-eN-yMr"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXL-aN-thU">
@@ -112,6 +113,9 @@
                             <color key="tintColor" red="0.25098039220000001" green="0.69019607839999997" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="recorderButton" destination="TXN-Pl-ukS" id="sHz-kP-dB8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -124,13 +124,14 @@
         }
     }
 }
-
+//准备录音——
 - (void)prepareToRecord
 {
+    //    设备回话音频信息设置
     [self setAudioSession];
     [self.recorder prepareToRecord];
 }
-
+//开始
 - (void)start
 {
     if ([self isRecording])
@@ -145,7 +146,7 @@
       [self conventToMp3];
     });
 }
-
+//暂停
 - (void)pause
 {
     if (self.isPauseRecord || ![self isRecording])
@@ -156,7 +157,7 @@
     self.isPauseRecord = YES;
     [self.thread sendWaitSignal];
 }
-
+//继续
 - (void)resume
 {
     if (!self.isPauseRecord)
@@ -167,7 +168,7 @@
     self.isPauseRecord = NO;
     [self.timer setFireDate:[NSDate distantPast]];
 }
-
+//停止
 - (void)stop
 {
     if (![self isRecording])
@@ -189,7 +190,7 @@
         }
     }
 }
-
+//销毁
 - (void)destroy
 {
     if (self.isStopRecord || self.isDestroyRecord) {
@@ -319,7 +320,7 @@
     }
     return mp3Path;
 }
-
+//MP3文件名字
 - (NSString *)randomMP3FileName
 {
     NSTimeInterval timeInterval = [[NSDate date] timeIntervalSince1970];

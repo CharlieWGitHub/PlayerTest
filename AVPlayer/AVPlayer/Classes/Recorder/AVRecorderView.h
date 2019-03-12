@@ -20,6 +20,17 @@ typedef void (^AVRecorderBlock)(NSInteger index);
 - (void)showAVRecorderView;
 - (void)hideAVRecorderView;
 
+@property (nonatomic, strong) UIView *alertView;
+//文字
+@property (nonatomic, strong) UILabel *recorderLab;
+//录音的图标
+@property (nonatomic, strong) UIImageView *voiceImg;
+//取消图标
+@property (nonatomic, strong) UIImageView *cancelImg;
+//音量图
+@property (nonatomic, strong) UIImageView *volumeImg;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
