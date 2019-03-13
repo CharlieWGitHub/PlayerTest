@@ -24,6 +24,11 @@
 		E919BD01222FA74F0008006E /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E919BD00222FA74F0008006E /* video.mp4 */; };
 		E919BD0A2230B9D10008006E /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E919BD092230B9D10008006E /* FileManager.m */; };
 		E95065892230FC7700ED0D1D /* AVImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E95065882230FC7700ED0D1D /* AVImagePicker.m */; };
+		E964B03622389C5500E6239B /* LeaveMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E964B03422389C5500E6239B /* LeaveMessageTableViewCell.m */; };
+		E964B03722389C5500E6239B /* LeaveMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E964B03522389C5500E6239B /* LeaveMessageTableViewCell.xib */; };
+		E964B03A2238A81D00E6239B /* RecorderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E964B0392238A81D00E6239B /* RecorderModel.m */; };
+		E964B03D2238D7A700E6239B /* RecorderDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E964B03C2238D7A700E6239B /* RecorderDataSource.m */; };
+		E964B0402238D8B300E6239B /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E964B03F2238D8B300E6239B /* Presenter.m */; };
 		E97C08D4223208540087D245 /* lame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E97C08D3223208540087D245 /* lame.framework */; };
 		E97C08D722320C820087D245 /* AVRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = E97C08D622320C820087D245 /* AVRecorder.m */; };
 		E97C08DA2232109C0087D245 /* AVThread.m in Sources */ = {isa = PBXBuildFile; fileRef = E97C08D92232109C0087D245 /* AVThread.m */; };
@@ -85,6 +90,15 @@
 		E919BD092230B9D10008006E /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		E95065872230FC7700ED0D1D /* AVImagePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVImagePicker.h; sourceTree = "<group>"; };
 		E95065882230FC7700ED0D1D /* AVImagePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVImagePicker.m; sourceTree = "<group>"; };
+		E964B03322389C5500E6239B /* LeaveMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeaveMessageTableViewCell.h; sourceTree = "<group>"; };
+		E964B03422389C5500E6239B /* LeaveMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeaveMessageTableViewCell.m; sourceTree = "<group>"; };
+		E964B03522389C5500E6239B /* LeaveMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaveMessageTableViewCell.xib; sourceTree = "<group>"; };
+		E964B0382238A81D00E6239B /* RecorderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecorderModel.h; sourceTree = "<group>"; };
+		E964B0392238A81D00E6239B /* RecorderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecorderModel.m; sourceTree = "<group>"; };
+		E964B03B2238D7A700E6239B /* RecorderDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecorderDataSource.h; sourceTree = "<group>"; };
+		E964B03C2238D7A700E6239B /* RecorderDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecorderDataSource.m; sourceTree = "<group>"; };
+		E964B03E2238D8B300E6239B /* Presenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presenter.h; sourceTree = "<group>"; };
+		E964B03F2238D8B300E6239B /* Presenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Presenter.m; sourceTree = "<group>"; };
 		E97C08D3223208540087D245 /* lame.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = lame.framework; sourceTree = "<group>"; };
 		E97C08D522320C820087D245 /* AVRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVRecorder.h; sourceTree = "<group>"; };
 		E97C08D622320C820087D245 /* AVRecorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVRecorder.m; sourceTree = "<group>"; };
@@ -260,6 +274,12 @@
 		E919BCF5222FA2BD0008006E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E964B0382238A81D00E6239B /* RecorderModel.h */,
+				E964B0392238A81D00E6239B /* RecorderModel.m */,
+				E964B03B2238D7A700E6239B /* RecorderDataSource.h */,
+				E964B03C2238D7A700E6239B /* RecorderDataSource.m */,
+				E964B03E2238D8B300E6239B /* Presenter.h */,
+				E964B03F2238D8B300E6239B /* Presenter.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -267,6 +287,9 @@
 		E919BCF6222FA2C50008006E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E964B03322389C5500E6239B /* LeaveMessageTableViewCell.h */,
+				E964B03422389C5500E6239B /* LeaveMessageTableViewCell.m */,
+				E964B03522389C5500E6239B /* LeaveMessageTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -439,6 +462,7 @@
 				E919BCC9222FA09E0008006E /* LaunchScreen.storyboard in Resources */,
 				E97C08DE223240C00087D245 /* gif.gif in Resources */,
 				E919BD01222FA74F0008006E /* video.mp4 in Resources */,
+				E964B03722389C5500E6239B /* LeaveMessageTableViewCell.xib in Resources */,
 				E919BCF2222FA23B0008006E /* Default-568h@2x.png in Resources */,
 				E919BCC6222FA09E0008006E /* Assets.xcassets in Resources */,
 				E97C08DD223240C00087D245 /* gif2.gif in Resources */,
@@ -563,10 +587,14 @@
 				E919BCFD222FA6380008006E /* UIView+CLSetRect.m in Sources */,
 				E97C08E1223241720087D245 /* AVRecorderView.m in Sources */,
 				E95065892230FC7700ED0D1D /* AVImagePicker.m in Sources */,
+				E964B03D2238D7A700E6239B /* RecorderDataSource.m in Sources */,
 				E97C08DA2232109C0087D245 /* AVThread.m in Sources */,
 				E919BCC1222FA09D0008006E /* ViewController.m in Sources */,
+				E964B03A2238A81D00E6239B /* RecorderModel.m in Sources */,
+				E964B03622389C5500E6239B /* LeaveMessageTableViewCell.m in Sources */,
 				E919BCCC222FA09E0008006E /* main.m in Sources */,
 				E97C08D722320C820087D245 /* AVRecorder.m in Sources */,
+				E964B0402238D8B300E6239B /* Presenter.m in Sources */,
 				E919BCF9222FA36C0008006E /* AVPlayerViewController.m in Sources */,
 				E919BCBE222FA09D0008006E /* AppDelegate.m in Sources */,
 				E919BD0A2230B9D10008006E /* FileManager.m in Sources */,

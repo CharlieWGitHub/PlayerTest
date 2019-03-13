@@ -77,12 +77,20 @@
                                     <constraint firstItem="Pca-rK-jam" firstAttribute="leading" secondItem="C40-NP-9e9" secondAttribute="leading" id="mxU-Lz-hyr"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tlV-Lc-lMA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="522"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="C40-NP-9e9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EpW-M3-uop"/>
                             <constraint firstItem="C40-NP-9e9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="FFv-8H-HEh"/>
+                            <constraint firstItem="tlV-Lc-lMA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QrM-CZ-cua"/>
                             <constraint firstItem="C40-NP-9e9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W6Z-fs-wvE"/>
+                            <constraint firstItem="tlV-Lc-lMA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="i21-sr-MaX"/>
+                            <constraint firstItem="C40-NP-9e9" firstAttribute="top" secondItem="tlV-Lc-lMA" secondAttribute="bottom" constant="1" id="ndO-mf-jhI"/>
+                            <constraint firstItem="tlV-Lc-lMA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pwo-Gg-BsK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -114,12 +122,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="leaveMessageTab" destination="tlV-Lc-lMA" id="FVT-j5-Ihl"/>
                         <outlet property="recorderButton" destination="TXN-Pl-ukS" id="sHz-kP-dB8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4" y="-415.14242878560725"/>
+            <point key="canvasLocation" x="-39" y="-168"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A0P-ij-ahx">
@@ -137,7 +146,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVv-LN-6Qc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="792.95352323838085"/>
+            <point key="canvasLocation" x="-855" y="-169"/>
         </scene>
     </scenes>
 </document>

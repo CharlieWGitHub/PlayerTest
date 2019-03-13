@@ -11,7 +11,7 @@
 #import "AVThread.h"
 #import <lame/lame.h>
 
-#define ZXLAudioRecorderCache @"com.zxl.chat.ZXLAudioRecorderCache"
+#define AudioRecorderCache @"AudioRecorderCache"
 
 @interface AVRecorder ()
 @property (nonatomic, strong) AVAudioRecorder *recorder;
@@ -65,7 +65,7 @@
                                                 settings:[self audioRecorderSettings]
                                                    error:&recorderSetupError];
         if (recorderSetupError) {
-            //            NSLog(@"创建播放器过程中发生错误，错误信息：%@",recorderSetupError.localizedDescription);
+            //NSLog(@"创建播放器过程中发生错误，错误信息：%@",recorderSetupError.localizedDescription);
             return nil;
         }
         _recorder.meteringEnabled = YES; //声波测试
@@ -202,6 +202,7 @@
     [self.thread signal];
     [self.timer setFireDate:[NSDate distantFuture]];
     [self.recorder stop];
+
     if ([[NSFileManager defaultManager] fileExistsAtPath:self.recorder.url.path]) {
         if (![self.recorder deleteRecording])
             NSLog(@"Failed to delete %@", self.recorder.url);
@@ -214,7 +215,7 @@
     return (self.recorder.isRecording && !self.isStopRecord);
 }
 
-#pragma mark - Convert to mp3
+#pragma mark -格式转换 Convert to mp3
 - (void)conventToMp3
 {
     NSString *cafFilePath = [self cafPath];
@@ -310,10 +311,10 @@
     NSString *cafPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"tmp.caf"];
     return cafPath;
 }
-
+//创建文件路径
 - (NSString *)mp3Path
 {
-    NSString *mp3Path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:ZXLAudioRecorderCache];
+    NSString *mp3Path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:AudioRecorderCache];
 
     if (![[NSFileManager defaultManager] fileExistsAtPath:mp3Path]) {
         [[NSFileManager defaultManager] createDirectoryAtPath:mp3Path withIntermediateDirectories:YES attributes:nil error:nil];

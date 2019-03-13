@@ -15,12 +15,24 @@
 #import "AVRecorder.h"
 #import "AVRecorderView.h"
 
-@interface ViewController () <UIImagePickerControllerDelegate, AVRecorderDelegate, UINavigationControllerDelegate>
+#import "LeaveMessageTableViewCell.h"
+#import "Presenter.h"
+#import <YYKit.h>
+#import "RecorderModel.h"
+#import "RecorderDataSource.h"
+
+static NSString *const reuserId = @"reuserId";
+
+@interface ViewController () <UIImagePickerControllerDelegate, AVRecorderDelegate, UINavigationControllerDelegate, PresentDelegate>
 @property (nonatomic, copy) NSString *strPath;
 @property (nonatomic, strong) AVAudioPlayer *player;
 @property (nonatomic, strong) AVRecorder *recorder;
 @property (nonatomic, strong) AVRecorderView *recorderView;
 @property (weak, nonatomic) IBOutlet UIButton *recorderButton;
+@property (weak, nonatomic) IBOutlet UITableView *leaveMessageTab;
+
+@property (nonatomic, strong) RecorderDataSource *dataSource;
+@property (nonatomic, strong) Presenter *pt;
 
 @end
 
@@ -31,10 +43,32 @@
     [super viewDidLoad];
     self.title = @"留言板";
     [self makeAnimation];
+    //    self.leaveMessageTab.delegate = self;
+    //    self.leaveMessageTab.dataSource = self;
+
+    [self initData];
 
     [self.recorderButton addTarget:self action:@selector(buttonAction:forEvent:) forControlEvents:UIControlEventAllTouchEvents];
     // Do any additional setup after loading the view, typically from a nib.
 }
+- (void)initData
+{
+    self.pt = [[Presenter alloc] init]; //  loadData
+    __weak typeof(self) weakSelf = self;
+    self.dataSource = [[RecorderDataSource alloc] initWithIdentifier:reuserId
+                                                      configureBlock:^(LeaveMessageTableViewCell *cell, RecorderModel *model, NSIndexPath *indexPath) {
+                                                        cell.dateLab.text = model.recorderDate;
+                                                        cell.leaveMessageLab.text = model.recorderHour;
+                                                        cell.indexPath = indexPath;
+                                                        cell.recoderTimeLab.text = model.recorderLength;
+                                                        cell.delegate = weakSelf.pt;
+                                                      }];
+    [self.dataSource addDataArray:self.pt.dataArray];
+    self.leaveMessageTab.dataSource = self.dataSource;
+    self.leaveMessageTab.delegate = self.dataSource;
+    self.pt.delegate = self;
+}
+
 - (void)buttonAction:(id)sender forEvent:(UIEvent *)event
 {
     UITouchPhase phase = event.allTouches.anyObject.phase;
@@ -164,10 +198,34 @@
     NSLog(@"录制时间%f", time);
 }
 
-
 #pragma mark 动画
 - (void)makeAnimation
 {
 }
+
+- (void)reloadData
+{
+
+    [self.dataSource addDataArray:self.pt.dataArray];
+    [self.leaveMessageTab reloadData];
+}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+//    return 10;
+//}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return 100;
+//}
+//- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//
+//    static NSString * iden = @"cell";
+//    LeaveMessageTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:iden];
+//    if (!cell) {
+//        cell = [LeaveMessageTableViewCell shareLeaveMessage];
+//    }
+////    cell.textLabel.text = @"made in China";
+//    return cell;
+//}
+
 
 @end
